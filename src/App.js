@@ -1,19 +1,38 @@
-import CategoryItem from './components/category-item/category-item.component';
-import categories from './components/category-item/category-data.component';
+import Directory from './components/directory/directory.component';
+
+//initialize an array for scalablity
+//DRY dont repeat yourself
+const categories =[
+  {
+    "id": 1,
+    "title": "hats",
+    "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+  },
+  {
+    "id": 2,
+    "title": "jackets",
+    "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+  },
+  {
+    "id": 3,
+    "title": "sneakers",
+    "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+  },
+  {
+    "id": 4,
+    "title": "womens",
+    "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+  },
+  {
+    "id": 5,
+    "title": "mens",
+    "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+  }
+]
 
 const App=()=> {
-  //initialize an array for scalablity
-  //DRY dont repeat yourself
   return (
-    <div className="categories-container">
-      {/* take the category array and destructre it */}
-      {/* {}=>{} expects a explicit return statement () implicit return takes place */}
-      {/* "Implicitly" means that the JS engine does it. "Explicitly" means that you must do it. */}
-      {/* destructre use {} entire object () */}
-    {categories.map(( category )=>(
-      <CategoryItem key={category.id} category={category} />
-      ))}
-    </div>
+    <Directory categories={categories} />
   );
 }
 

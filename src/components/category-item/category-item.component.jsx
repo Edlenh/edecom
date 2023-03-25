@@ -1,7 +1,7 @@
 import './category-item.styles.scss'
 
 const CategoryItem  = ({category}) =>{
-    //destructure
+    //destructure from the category object. 
     const {imageUrl, title} = category
     return(
         <div className="category-container">
